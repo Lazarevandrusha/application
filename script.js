@@ -21,20 +21,35 @@ const personalMovieDb = {
 //         i--;
 //     }
 // }
+// let i = 0;
+// while (i < 2) {
+//     const a = prompt('Один из последних просмотренных фильмов?', ''),
+//           b = prompt('На сколько оцените его?', '');
+
+//     if (a != '' && b != '' && a != null && b != null && a.length < 50){
+//         personalMovieDb.movies[a] = b;
+//         console.log('Done');
+//     } else {
+//         console.log('Error');
+//         i--;
+//     }
+//     i++;
+// }
 let i = 0;
-while (i < 2) {
+do {
     const a = prompt('Один из последних просмотренных фильмов?', ''),
           b = prompt('На сколько оцените его?', '');
-
-    if (a != '' && b != '' && a != null && b != null && a.length < 50){
-        personalMovieDb.movies[a] = b;
-        console.log('Done');
-    } else {
-        console.log('Error');
-        i--;
-    }
+    
+        if (a != '' && b != '' && a != null && b != null && a.length < 50){
+            personalMovieDb.movies[a] = b;
+            console.log('Done');
+        } else {
+            console.log('Error');
+            i--;
+        }
     i++;
 }
+while (i < 2);
 
     if (personalMovieDb.count < 10) {
         console.log('Просмотрено довольно мало фильмов');
