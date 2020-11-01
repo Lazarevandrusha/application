@@ -1,5 +1,5 @@
 'use strict';
-const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '');
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
 const personalMovieDb = {
     count : numberOfFilms,
@@ -9,7 +9,20 @@ const personalMovieDb = {
     privat : false
 };
 
-for (let i = 0; i < 2; i++){
+// for (let i = 0; i < 2; i++){
+//     const a = prompt('Один из последних просмотренных фильмов?', ''),
+//           b = prompt('На сколько оцените его?', '');
+
+//     if (a != '' && b != '' && a != null && b != null && a.length < 50){
+//         personalMovieDb.movies[a] = b;
+//         console.log('Done');
+//     } else {
+//         console.log('Error');
+//         i--;
+//     }
+// }
+let i = 0;
+while (i < 2) {
     const a = prompt('Один из последних просмотренных фильмов?', ''),
           b = prompt('На сколько оцените его?', '');
 
@@ -20,6 +33,7 @@ for (let i = 0; i < 2; i++){
         console.log('Error');
         i--;
     }
+    i++;
 }
 
     if (personalMovieDb.count < 10) {
